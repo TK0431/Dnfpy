@@ -8,3 +8,6 @@ def get_hwnd(name, cls=None):
     cls:窗口类
     """
     return win32gui.FindWindow(cls, name)
+
+def get_top_hwnd():
+    return win32gui.GetForegroundWindow()

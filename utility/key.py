@@ -4,7 +4,7 @@ import time                # 连续进行两个动作可能太快而效果不明
 
 m = PyMouse()              # 鼠标的实例m
 k = PyKeyboard()           # 键盘的实例k
-s = 0.1                    # 双击间隔时间
+s = 0.2                    # 双击间隔时间
 
 def get_screen_size():
     """
@@ -103,6 +103,8 @@ def send_right(n = 1, interval = s):
     send_mykey(k.right_key,n,interval)
 def send_space(n = 1, interval = s):
     send_mykey(k.space_key,n,interval)
+def send_enter(n = 1, interval = s):
+    send_mykey(k.enter_key,n,interval)
 def send_mykey(key, n ,interval):
     for i in range(n):
         k.press_key(key)
