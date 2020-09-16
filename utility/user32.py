@@ -9,5 +9,8 @@ def get_hwnd(name, cls=None):
     """
     return win32gui.FindWindow(cls, name)
 
+def set_top_hwnd(hwnd):
+    win32gui.SetForegroundWindow(hwnd)
+
 def get_top_hwnd():
     return win32gui.GetForegroundWindow()

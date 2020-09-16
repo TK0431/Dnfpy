@@ -5,13 +5,14 @@ import utility.log as log
 import logic.main_logic as logic
 
 full_path = r'E:\GitHub\AutoTest\AutoTest\bin\Debug\AutoTest.exe'
-name = '地下城与勇士'
+name = 'Send Message'
 debug_flg = True
 sleep_time = 0.1
 
 if __name__ == "__main__":
     '''
-    程序主启动窗口
+    程序主启动窗口1
+
     '''
     # 测试模式启动控制台Log
     if debug_flg:
@@ -33,6 +34,7 @@ if __name__ == "__main__":
             if hwnd == 0:
                 break
         else:
+            # user32.set_top_hwnd(hwnd)
             top_hwnd = user32.get_top_hwnd()
             if top_hwnd == hwnd:
                 print(str(cnt))

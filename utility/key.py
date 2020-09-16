@@ -4,7 +4,7 @@ import time                # 连续进行两个动作可能太快而效果不明
 
 m = PyMouse()              # 鼠标的实例m
 k = PyKeyboard()           # 键盘的实例k
-s = 0.2                    # 双击间隔时间
+s = 0.1                    # 双击间隔时间
 
 def get_screen_size():
     """

@@ -1,16 +1,24 @@
-import utility.key as key
-
-
+import win32api
+import time
 
 def skill1(hwnd):
-    key.send_down(2)
-    key.send_space()
+    time.sleep(3)
+    win32api.keybd_event(65,0x1e,0,0)
+    time.sleep(1)
+    win32api.keybd_event(65,0x1e,0,0)
+    time.sleep(1)
+    win32api.keybd_event(65,0x1e,0,0)
+    time.sleep(1)
+    win32api.keybd_event(65,0x1e,0,0)
+    time.sleep(1)
 
-def skip_event():
-    key.send_space()
+import ctypes as C
 
-def move_goods():
-    key.send_num_key(1)
+def skill2():
+    msdk = C.CDLL(r'E:\GitHub\Dnfpy\logic\sxAnswer.dll',C.RTLD_GLOBAL)
+    if msdk.OpenDevice()==1:
+        print("打开设备成功！")
+    else:
+        print("打开设备失败！")
 
-def get_goods():
-    key.send_key('x')
+skill2()
