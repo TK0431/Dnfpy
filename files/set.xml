@@ -1,0 +1,12 @@
+<setting>
+    <events>
+        <event value='1' name='' arg=''/>
+        <event value='2' name='' arg=''/>
+        <event value='3' name='' arg=''/>
+    </events>
+    <id value=''/>
+        <role value='' name='' row='1' col='1' event='1'/>
+        <role value='' name='' row='1' col='2' event='1'/>
+        <role value='' name='' row='1' col='3' event='1'/>
+    </id/>
+</users>
