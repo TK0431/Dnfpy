@@ -4,9 +4,24 @@
         <event value='2' name='' arg=''/>
         <event value='3' name='' arg=''/>
     </events>
-    <id value=''/>
-        <role value='' name='' row='1' col='1' event='1'/>
-        <role value='' name='' row='1' col='2' event='1'/>
-        <role value='' name='' row='1' col='3' event='1'/>
-    </id/>
+    <users>
+        <id value='644'/>
+            <role value='' name='' row='1' col='1' event='1'/>
+            <role value='' name='' row='1' col='2' event='1'/>
+            <role value='' name='' row='1' col='3' event='1'/>
+        </id/>
+        <id value='184'/>
+            <role value='' name='' row='1' col='1' event='1'/>
+            <role value='' name='' row='1' col='2' event='1'/>
+            <role value='' name='' row='1' col='3' event='1'/>
+        </id/>
+    </users>
+    <point>
+        <id name=''>
+            <pos x='' y='' r='' g='' b=''/>
+            <pos x='' y='' r='' g='' b=''/>
+            <pos x='' y='' r='' g='' b=''/>
+            <pos x='' y='' r='' g='' b=''/>
+        </id>
+    </pos>
 </users>

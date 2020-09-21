@@ -1,25 +1,25 @@
-import utility.opencv as opencv
-import utility.user32 as user32
-from functools  import wraps
+
+import ctypes as C
+import cv2
 import time
+import random
+import utility.device as device
+import utility.user32 as user32
+import utility.opencv as opencv
 
-def timefn(fn):
-    @wraps(fn)
-    def get_diff_time(*args,**kwargs):
-        t1 = time.time()
-        result = fn(*args,**kwargs)
-        t2 = time.time()
-        print(f'@timefn: {fn.__name__} took {t2 - t1: .5f} s')
-        return result
+# img = user32.get_win_rgbs(70,807)
+# cv2.imshow('test', img)
+# cv2.waitKey(0)
 
-    return get_diff_time
+while True:
+    time.sleep(1)
+    user32.print_mouse_pos()
 
-@timefn
-def get():
-    user32.get_win_rgb(5,5)
-    hwnd = user32.get_hwnd('Send Message')
-    print(user32.set_win_pos(hwnd))
-    print(user32.get_mouse_pos())
+# 1080 * 1920
+# img = cv2.imread('img/1.png')
+# img2 = img[757:787,62:92,:]
+# cv2.imshow('test',img2)
+# cv2.waitKey(0)
 
-get()
-
+# hwnd = user32.get_hwnd('AutoTest')
+# print(user32.set_win_pos(hwnd))

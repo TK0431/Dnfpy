@@ -1,6 +1,7 @@
 import logging
 from datetime import datetime
 
+
 # Log 配置
 log_format = '%(asctime)s : %(levelname)s  %(message)s'
 log_file = 'log/log_' + datetime.now().strftime('%Y%m%d%H%M%S') + '.log'

@@ -29,7 +29,11 @@ def set_win_pos(hwnd):
 def get_mouse_pos():
     return win32api.GetCursorPos()
 
-def get_win_rgbs(x, y, w, h):
+def print_mouse_pos():
+    x,y = win32api.GetCursorPos()
+    print(x,y)
+
+def get_win_rgbs(x, y, w = 20, h = 20):
     gdi32 = windll.gdi32
     user32 = windll.user32
     hdc = user32.GetDC(None)  # 获取颜色值
