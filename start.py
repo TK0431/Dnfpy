@@ -2,7 +2,7 @@ import time
 import utility.start as start
 import utility.user32 as user32
 import utility.log as log
-import logic.main_logic as logic
+import utility.xml as xml
 
 full_path = r'E:\GitHub\AutoTest\AutoTest\bin\Debug\AutoTest.exe'
 name = 'AutoTest'
@@ -19,29 +19,15 @@ if __name__ == "__main__":
         log.log_console_start()
 
     log.log_info('----- Script Start -----')
-    cnt = 0
-    # 处理开始
-    while True:
-        # 处理时间间隔 
-        # time.sleep(sleep_time)
 
-        # 获取Hwnd
-        hwnd = user32.get_hwnd(name)
-        if hwnd == 0:
-            # 重启Exe1
-            # hwnd = start.exe_start(name, full_path)
-            # 
-            # 重启失败，结束脚本
-            if hwnd == 0:
-                break
-        else:
-            # user32.set_top_hwnd(hwnd)
-            top_hwnd = user32.get_top_hwnd()
-            if top_hwnd == hwnd:
-                logic.main_start(hwnd)
-            else:
-                pass
-            print(str(cnt))
-            cnt+=1
+    # 初期化
+    users, points = xml.get_set_value()
+
+    # 处理开始
+    for key in users.keys():
+        log.log_info(f'User Start:{key}')
+        for value,name,cnt,envent in users[key]:
+            log.log_info(f'User Role:{value} {name}')
+            print(value,name,cnt,envent)
 
     log.log_info('----- Script  End  -----')

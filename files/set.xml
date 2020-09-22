@@ -1,27 +1,28 @@
 <setting>
-    <events>
-        <event value='1' name='' arg=''/>
-        <event value='2' name='' arg=''/>
-        <event value='3' name='' arg=''/>
-    </events>
     <users>
-        <id value='644'/>
-            <role value='' name='' row='1' col='1' event='1'/>
-            <role value='' name='' row='1' col='2' event='1'/>
-            <role value='' name='' row='1' col='3' event='1'/>
-        </id/>
-        <id value='184'/>
-            <role value='' name='' row='1' col='1' event='1'/>
-            <role value='' name='' row='1' col='2' event='1'/>
-            <role value='' name='' row='1' col='3' event='1'/>
-        </id/>
-    </users>
-    <point>
-        <id name=''>
-            <pos x='' y='' r='' g='' b=''/>
-            <pos x='' y='' r='' g='' b=''/>
-            <pos x='' y='' r='' g='' b=''/>
-            <pos x='' y='' r='' g='' b=''/>
+        <id value='644'>
+            <role value='1' name='1' cnt='1' event='ql'/>
+            <role value='2' name='2' cnt='2' event='ql'/>
+            <role value='3' name='3' cnt='3' event='ql'/>
         </id>
-    </pos>
-</users>
+        <id value='184'>
+            <role value='1' name='1' cnt='1' event='hl'/>
+            <role value='2' name='2' cnt='2' event='hl'/>
+            <role value='3' name='3' cnt='3' event='hl'/>
+        </id>
+    </users>
+    <points>
+        <point value='ql'>
+            <pos x='1' y='5' r='0' g='1' b='3'/>
+            <pos x='2' y='6' r='0' g='1' b='3'/>
+            <pos x='3' y='7' r='0' g='1' b='3'/>
+            <pos x='4' y='8' r='0' g='1' b='3'/>
+        </point>
+        <point value='hl'>
+            <pos x='1' y='5' r='0' g='1' b='3'/>
+            <pos x='2' y='6' r='0' g='1' b='3'/>
+            <pos x='3' y='7' r='0' g='1' b='3'/>
+            <pos x='4' y='8' r='0' g='1' b='3'/>
+        </point>
+    </points>
+</setting>

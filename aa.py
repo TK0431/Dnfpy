@@ -7,13 +7,13 @@ import utility.device as device
 import utility.user32 as user32
 import utility.opencv as opencv
 
-# img = user32.get_win_rgbs(70,807)
+img = user32.get_win_rgbs(70,807)
 # cv2.imshow('test', img)
 # cv2.waitKey(0)
 
-while True:
-    time.sleep(1)
-    user32.print_mouse_pos()
+# while True:
+#     time.sleep(1)
+#     user32.print_mouse_pos()
 
 # 1080 * 1920
 # img = cv2.imread('img/1.png')
