@@ -22,7 +22,7 @@ def get_top_hwnd():
     return win32gui.GetForegroundWindow()
 
 
-def set_win_pos(hwnd):
+def get_win_pos(hwnd):
     l, t, r, b = win32gui.GetWindowRect(hwnd)
     return l, t, r-l, b-t
 
