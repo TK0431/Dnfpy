@@ -1,0 +1,12 @@
+<setting>
+    <id value='644'>
+        <role value='1' name='1' cnt='1' event='ql'/>
+        <role value='2' name='2' cnt='2' event='ql'/>
+        <role value='3' name='3' cnt='3' event='ql'/>
+    </id>
+    <id value='184'>
+        <role value='1' name='1' cnt='1' event='hl'/>
+        <role value='2' name='2' cnt='2' event='hl'/>
+        <role value='3' name='3' cnt='3' event='hl'/>
+    </id>
+</setting>

@@ -34,7 +34,7 @@ import utility.opencv as opencv
 # print(user32.get_win_pos(hwnd))
 
 
-img = cv2.imread(r'D:\7.png')
+img = cv2.imread(r'E:\1.png')
 x,y =16,13
 # x1,y1 = 500,710
 # x2,y2 = 500,770
@@ -45,9 +45,15 @@ x,y =16,13
 # x1,y1 = 835,928
 # x2,y2 = 835,938
 # x3,y3 = 835,948
-x1,y1 = 503,790
-x2,y2 = 503,815
-x3,y3 = 503,835
-print(img[x1,y1,2],img[x1,y1,1],img[x1,y1,0])
-print(img[x2,y2,2],img[x2,y2,1],img[x2,y2,0])
-print(img[x3,y3,2],img[x3,y3,1],img[x3,y3,0])
+# x1,y1 = 503,790
+# x2,y2 = 503,815
+# x3,y3 = 503,835
+# print(img[x1,y1,2],img[x1,y1,1],img[x1,y1,0])
+# print(img[x2,y2,2],img[x2,y2,1],img[x2,y2,0])
+# print(img[x3,y3,2],img[x3,y3,1],img[x3,y3,0])
+
+x,y = 101,101
+print(img[y,x,2],img[y,x,1],img[y,x,0])
+
+hwnd = user32.get_hwnd('Send Message')
+print(user32.get_win_pos(hwnd))

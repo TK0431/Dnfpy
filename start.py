@@ -25,7 +25,7 @@ if __name__ == "__main__":
     if not device.open_device(): exit
 
     # 初期化
-    users, points = xml.get_set_value()
+    users = xml.get_users_value()
 
     # 处理开始
     for key in users.keys():

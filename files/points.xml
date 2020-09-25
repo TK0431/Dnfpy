@@ -1,17 +1,5 @@
-<setting>
-    <users>
-        <id value='644'>
-            <role value='1' name='1' cnt='1' event='ql'/>
-            <role value='2' name='2' cnt='2' event='ql'/>
-            <role value='3' name='3' cnt='3' event='ql'/>
-        </id>
-        <id value='184'>
-            <role value='1' name='1' cnt='1' event='hl'/>
-            <role value='2' name='2' cnt='2' event='hl'/>
-            <role value='3' name='3' cnt='3' event='hl'/>
-        </id>
-    </users>
-    <points>
+<points>
+    <group value='ql'>
         <point value='ql_dzb'>
             <pos x='694' y='487' r='20' g='18' b='18'/>
             <pos x='754' y='487' r='20' g='18' b='18'/>
@@ -32,7 +20,7 @@
             <pos x='1392' y='67' r='176' g='149' b='102'/>
             <pos x='1413' y='67' r='121' g='98' b='69'/>
         </point>
-        <point value='ql_jl'>
+        <point value='ql_over'>
             <pos x='1' y='5' r='3' g='3' b='3'/>
             <pos x='2' y='6' r='3' g='3' b='3'/>
             <pos x='3' y='7' r='3' g='3' b='3'/>
@@ -52,5 +40,5 @@
             <pos x='922' y='822' r='28' g='4' b='4'/>
             <pos x='932' y='822' r='26' g='5' b='5'/>
         </point>
-    </points>
-</setting>
+    </group>
+</points>
