@@ -4,6 +4,7 @@ import utility.device as device
 import utility.xml as xml
 import ctypes as C
 import time
+import random 
 
 from enum import Enum
 
@@ -23,7 +24,11 @@ class ql_type(Enum):
     goods = 11
     end = 12
     next = 13
+    sell = 14
+    quite = 15
+    out = 16
 
+over_cnt = 0
 
 def start(key, value, name, cnt):
     points = xml.get_points_value('ql')
@@ -241,14 +246,22 @@ def do_wined(points, cnt = 0):
     '''
     结算
     '''
+    global over_cnt
     if point_judge(points, 'ql_end'):
         time.sleep(0.5)
         log.log_info("Wined：等待...")
         return ql_type.wined
     elif point_judge(points, 'ql_next'):
-        # device.key_press(b'space')
-        log.log_info("Wined：已按下Space...")
-        return ql_type.next
+        if over_cnt >= 10 and random.randint(0,4) == 0:
+            over_cnt = 0
+            # device.key_press(b'f12')
+            log.log_info("Wined：已退出...")
+            return ql_type.quite
+        else:
+            over_cnt += 1
+            # device.key_press(b'space')
+            log.log_info("Wined：已按下Space...")
+            return ql_type.next
     elif cnt > 9:
         log.log_info("Wined：未知...")
         # 保存图片
@@ -263,12 +276,33 @@ def do_next(points):
     再次
     '''
     if point_judge(points, 'ql_progress'):
-        log.log_info("Next：等待...")
-        return ql_type.next
+        log.log_info("Next：进度...")
+        return ql_type.progress
     elif point_judge(points, 'ql_next'):
         log.log_info("Next：等待...")
         return ql_type.next
 
+def do_quite(points):
+    '''
+    退出
+    '''
+    if point_judge(points, 'ql_out'):
+        device.mouse_move(100,100)
+        device.mouse_left_click()
+        log.log_info("Out：Start Sell...")
+        return ql_type.sell
+    elif point_judge(points, 'ql_next'):
+        log.log_info("Next：等待...")
+        return ql_type.next
+    for i in range(1,10):
+        pass
+
+
+def do_sell(points):
+    '''
+    Sells
+    '''
+    
 
 def do_unknow(hwnd, points):
     '''
