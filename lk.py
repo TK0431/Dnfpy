@@ -1,36 +1,56 @@
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+import ctypes as C
+import cv2
+import time
+import random
+import numpy as np
+import utility.device as device
+import utility.user32 as user32
+import utility.opencv as opencv
+
+# img = user32.get_win_rgbs(70,807)
+# cv2.imshow('test', img)
+# cv2.waitKey(0)
+
+# while True:
+#     time.sleep(1)
+#     x,y = user32.get_mouse_pos()
+#     r,g,b = user32.get_win_rgb(x,y)
+#     print(x,y,r,g,b)
+#     img = np.zeros((100,100,3),dtype=np.uint8)
+#     img[:,:,0] = b
+#     img[:,:,1] = g
+#     img[:,:,2] = r
+#     cv2.imshow('test',img)
+#     cv2.waitKey(1000)
+
+# 1080 * 1920
+# img = cv2.imread('img/1.png')
+# img2 = img[757:787,62:92,:]
+# cv2.imshow('test',img2)
+# cv2.waitKey(0)
+
+# hwnd = user32.get_hwnd('地下城与勇士')
+# user32.get_pic(hwnd,'3')
+#print(user32.get_win_pos(hwnd))
+
+img = cv2.imread('img\\3.png')
+# # x,y =4,2
+x1,y1 = 1098,56
+# x2,y2 = 543,389
+# x3,y3 = 640,389
+print(img[y1,x1,2],img[y1,x1,1],img[y1,x1,0])
+# print(img[y2,x2,2],img[y2,x2,1],img[y2,x2,0])
+# print(img[y3,x3,2],img[y3,x3,1],img[y3,x3,0])
 
 
-class Solution:
-    def maxDepth(self, root: TreeNode) -> int:
-        if not root: return 0
-        self.max_deep = 1
-        def get_next(node, deep = 2):
-            if not node: return
-            self.max_deep = deep if deep > self.max_deep else self.max_deep
-            get_next(node.left, deep + 1)
-            get_next(node.right, deep + 1)
+img = cv2.imread(r'img\2.png')
+print(img[y1,x1,2],img[y1,x1,1],img[y1,x1,0])
 
-        get_next(root.left)
-        get_next(root.right)
-        return self.max_deep
 
-#[3,9,20,null,null,15,7]
-n1 = None
-# n2 = TreeNode(9)
-# n3 = TreeNode(20)
-# n4 = None
-# n5 = None
-# n6 = TreeNode(15)
-# n7 = TreeNode(7)
-# n1.left = n2
-# n1.right = n3
-# n3.left = n6
-# n3.right = n7
-s = Solution()
-print(s.maxDepth(n1))
+# print(user32.get_win_rgb(1099+4,57+2))
+
+# for i in range(1090,1110):
+#     for j in range(47,67):
+#         r,g,b =user32.get_win_rgb(i,j)
+#         if r==204 and g==180 and b==154:
+#             print(i,j)

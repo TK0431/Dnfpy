@@ -14,3 +14,7 @@ def show_rgb(r,g,b):
     img[:,:,2]=r
     cv2.imshow('rgb',img)
     cv2.waitKey(img)
+
+def save_img(points):
+    tm = '20190101'
+    cv2.imwrite(f'img\\{tm}.png',points)

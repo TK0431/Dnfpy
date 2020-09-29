@@ -27,6 +27,7 @@ def get_win_pos(hwnd):
     l, t, r, b = win32gui.GetWindowRect(hwnd)
     return l, t, r-l, b-t
 
+
 def get_mouse_pos():
     return win32api.GetCursorPos()
 
@@ -71,7 +72,6 @@ def timefn(fn):
 
     return get_diff_time
 
-@timefn
 def get_pic(hwnd, fname = 'test'):
     # 根据窗口句柄获取窗口的设备上下文DC（Divice Context）
     hwndDC = win32gui.GetWindowDC(hwnd)
@@ -93,4 +93,7 @@ def get_pic(hwnd, fname = 'test'):
     saveDC.SelectObject(saveBitMap)
     # 截取从左上角（0，0）长宽为（w，h）的图片
     saveDC.BitBlt((0, 0), (w, h), mfcDC, (0, 0), win32con.SRCCOPY)
-    saveBitMap.SaveBitmapFile(saveDC, f'img\\{fname}.jpg')
+    try:
+        saveBitMap.SaveBitmapFile(saveDC, f'img\\{fname}.jpg')
+    except Exception:
+        pass
