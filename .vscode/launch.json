@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "pythonPath": "D:\\Program\\Python37-32\\python.exe"
+            "pythonPath": "${command:python.interpreterPath}"
         }
     ]
 }
