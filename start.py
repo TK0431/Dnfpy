@@ -5,10 +5,9 @@ import utility.user32 as user32
 import utility.log as log
 import utility.xml as xml
 
-full_path = r'E:\GitHub\AutoTest\AutoTest\bin\Debug\AutoTest.exe'
 
 debug_flg = True
-sleep_time = 0.1
+
 
 if __name__ == "__main__":
     '''
@@ -24,15 +23,15 @@ if __name__ == "__main__":
     # 打开设备
     if not device.open_device(): exit
 
-    # 初期化
+    # 初期化（暂时无用）
     users = xml.get_users_value()
 
-    # 处理开始
+    # 处理开始（循环暂时无用，后续切换角色用）
     for key in users.keys():
         log.log_info(f'User Start:{key}')
         for value,name,cnt,envent in users[key]:
             log.log_info(f'User Role:{value} {name}')
-            #
+            # 主入口（有用）
             main.start(key,value,name,cnt,envent)
             #
             xml.set_step_value(time.strftime("%Y%m%d", time.localtime()),key,cnt)

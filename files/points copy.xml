@@ -16,8 +16,8 @@
         <point pic="11" value="ql_door">
             <pos b="0" g="0" r="0" x="20" y="50" />
             <pos b="0" g="0" r="0" x="1250" y="50" />
-            <pos b="255" g="255" r="255" x="640" y="50" />
-        </point>cls
+            <pos b="0" g="0" r="0" x="20" y="660" />
+        </point>
 
         <point pic="5" value="ql_start">
             <pos b="173" g="187" r="211" x="1" y="1" />
@@ -67,22 +67,22 @@
             <pos b="67" g="36" r="9" x="1203" y="14" />
         </point>
 
-        <point pic="14" value="ql_map1">
+        <point pic="14" value="ql_map">
             <pos b="102" g="102" r="68" x="514" y="99" />
             <pos b="0" g="17" r="51" x="861" y="73" />
             <pos b="160" g="92" r="46" x="273" y="555" />
         </point>
 
-        <point pic="13" value="ql_map">
+        <point pic="13" value="ql_map1">
             <pos b="102" g="102" r="68" x="514" y="99" />
             <pos b="0" g="17" r="51" x="861" y="73" />
             <pos b="50" g="51" r="136" x="963" y="498" />
         </point>
 
         <point pic="15" value="ql_over">
-            <pos b="124" g="123" r="124" x="1102" y="86" />
-            <pos b="124" g="123" r="124" x="1134" y="86" />
-            <pos b="23" g="22" r="24" x="1149" y="87" />
+            <pos b="102" g="102" r="68" x="1102" y="86" />
+            <pos b="0" g="17" r="51" x="1134" y="86" />
+            <pos b="160" g="92" r="46" x="1149" y="87" />
         </point>
     </group>
 </points>

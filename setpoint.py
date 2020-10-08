@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import cv2
 
-tree = ET.parse(r'files/points_bk.xml')
+tree = ET.parse(r'files/points.xml')
 root = tree.getroot()
 
 def set_pos(pic,point):
@@ -21,18 +21,7 @@ for group in groups:
     if group.get('value') == 'ql':
         points = group.findall('point')
         for point in points:
-            if point.get('value') == 'ql_jd':
-                set_pos(r'img\3.png',point)
-            elif point.get('value') == 'ql_dzb':
-                set_pos(r'img\4.png',point)
-            elif point.get('value') == 'ql_door':
-                # set_pos(r'img\3.png',point)
-                pass
-            elif point.get('value') == 'ql_f10':
-                set_pos(r'img\2.png',point)
-            elif point.get('value') == 'ql_zb_1':
-                set_pos(r'img\5.png',point)
-            elif point.get('value') == 'ql_zb_1':
-                set_pos(r'img\6.png',point)
+            pic = point.get('pic')
+            set_pos('img\\'+ pic +'.png',point)
 
-tree.write(r'files/points.xml')
+tree.write(r'files/points_2.xml')

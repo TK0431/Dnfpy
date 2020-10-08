@@ -116,8 +116,8 @@ def get_pos(x,y,x_r,y_r):
     return x, y
 
 
-def mouse_move(x,y,x_r,y_r):
-    x,y = get_pos(x,y)
+def mouse_move(x,y):
+    #x,y = get_pos(x,y)
     msdk.SimulationMove(x,y)
 
 
@@ -133,8 +133,6 @@ def mouse_left_up(slp=0.1):
 
 def mouse_left_click(cnt=1, slp=0.05):
     for cnt in range(0, cnt):
-        slp = get_sleep(slp)
-        msdk.mouse_left_down(slp)
-        msdk.mouse_left_up(slp)
-
-
+        get_sleep(slp)
+        mouse_left_down(slp)
+        mouse_left_up(slp)
